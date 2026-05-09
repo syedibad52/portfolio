@@ -1,5 +1,4 @@
 import "./styles/Work.css";
-import WorkImage from "./WorkImage";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -53,21 +52,44 @@ const Work = () => {
           My <span>Work</span>
         </h2>
         <div className="work-flex">
-          {[...Array(6)].map((_value, index) => (
+          {[
+            {
+              title: "Smart parking system",
+              category: "IoT / Embedded",
+              description: "Developed an automated parking system using Arduino Uno, IR sensors, and a servo motor to detect vehicle entry and control gate operations, reducing manual effort and improving efficiency while gaining hands-on experience in IoT, embedded systems, and programming logic.",
+              tools: "Arduino Uno, C, IoT",
+              image: "/images/placeholder.webp"
+            },
+            {
+              title: "Jarvis Voice Assistant",
+              category: "Python Project",
+              description: "Developed a Python-based voice assistant with wake-word detection (\"Jarvis\") that recognizes voice commands to perform tasks such as opening applications and websites (YouTube, Instagram), demonstrating skills in speech recognition, automation, and Python scripting.",
+              tools: "Python, Speech Recognition",
+              image: "/images/placeholder.webp"
+            },
+            {
+              title: "Employee Management System (EMS)",
+              category: "Full-stack Web App",
+              description: "Developed a full-stack Employee Management System with role-based access control (RBAC) to manage employee data, attendance, and leave records. Implemented secure authentication, backend APIs, and a responsive UI for efficient HR operations.",
+              tools: "React, Node.js, RBAC",
+              image: "/images/placeholder.webp"
+            }
+          ].map((project, index) => (
             <div className="work-box" key={index}>
               <div className="work-info">
                 <div className="work-title">
                   <h3>0{index + 1}</h3>
 
                   <div>
-                    <h4>Project Name</h4>
-                    <p>Category</p>
+                    <h4>{project.title}</h4>
+                    <p>{project.category}</p>
                   </div>
                 </div>
-                <h4>Tools and features</h4>
-                <p>Javascript, TypeScript, React, Threejs</p>
+                <h4>Description</h4>
+                <p>{project.description}</p>
+                <h4 style={{marginTop: "15px"}}>Tools and features</h4>
+                <p>{project.tools}</p>
               </div>
-              <WorkImage image="/images/placeholder.webp" alt="" />
             </div>
           ))}
         </div>
