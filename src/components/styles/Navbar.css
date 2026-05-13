@@ -44,6 +44,20 @@
   font-weight: 700;
   font-size: 14px;
   letter-spacing: 0.2px;
+  display: flex;
+  align-items: center;
+}
+.navbar-logo-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+.navbar-logo-img:hover {
+  border-color: rgba(168, 124, 255, 0.8);
+  transform: scale(1.1);
 }
 @media only screen and (min-width: 500px) {
   .header {
@@ -59,6 +73,10 @@
   }
   .navbar-title {
     font-size: 16px;
+  }
+  .navbar-logo-img {
+    width: 40px;
+    height: 40px;
   }
 }
 @media only screen and (min-width: 900px) {
@@ -79,5 +97,9 @@
   }
   .navbar-title {
     font-size: 18px;
+  }
+  .navbar-logo-img {
+    width: 44px;
+    height: 44px;
   }
 }

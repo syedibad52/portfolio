@@ -197,6 +197,15 @@
   font-weight: 700;
   font-size: 14px;
   letter-spacing: 0.2px;
+  display: flex;
+  align-items: center;
+}
+.loader-logo-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(0, 0, 0, 0.3);
 }
 @keyframes blink {
   0% {
@@ -352,6 +361,10 @@
   .loader-title {
     font-size: 16px;
   }
+  .loader-logo-img {
+    width: 40px;
+    height: 40px;
+  }
 }
 @media only screen and (min-width: 1200px) {
   .loading-header {
@@ -359,5 +372,9 @@
   }
   .loader-title {
     font-size: 18px;
+  }
+  .loader-logo-img {
+    width: 44px;
+    height: 44px;
   }
 }
